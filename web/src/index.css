@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-forest: #1F4D36;
+  --color-forest-dark: #163926;
+  --color-leaf: #3C7A55;
+  --color-mint: #DCEFE2;
+  --color-mint-soft: #EEF6F0;
+  --color-cream: #FAF7F0;
+  --color-sand: #F1EBDE;
+  --color-line: #E6E0D2;
+  --color-honey: #E3B448;
+  --color-honey-soft: #FBF1D6;
+  --color-earth: #8B6B4A;
+  --color-ink: #1D2A22;
+  --color-muted: #6A766E;
+  --color-tomato: #C2553F;
+  --color-tomato-soft: #FBE9E4;
+  --shadow-card: 0 1px 2px rgb(29 42 34 / 0.04), 0 4px 16px rgb(29 42 34 / 0.06);
+  --shadow-lift: 0 8px 28px rgb(31 77 54 / 0.18);
+}
+
+html, body { background: var(--color-sand); }
+body { font-family: var(--font-sans); color: var(--color-ink); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+input, textarea, select, button { font: inherit; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+@keyframes rise { from { transform: translateY(16px); opacity: 0 } to { transform: none; opacity: 1 } }
+.animate-rise { animation: rise .22s ease-out; }
+@media (prefers-reduced-motion: reduce) { .animate-rise { animation: none; } }
